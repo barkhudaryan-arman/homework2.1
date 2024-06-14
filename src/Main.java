@@ -18,7 +18,7 @@ public class Main {
 
 
         Integer[] value4 = {3, 4};
-        changeValue3(value4);
+        changeValue4(value4);
         System.out.println(Arrays.toString(value4));
 
 
@@ -27,9 +27,9 @@ public class Main {
         changePerson(person);
         System.out.println("After change: " + person);
 
-        Person person2 = new Person("Lyapis", "Trubetskoy");
+        Person2 person2 = new Person2("Lyapis", "Trubetskoy");
         System.out.println("Before change: " + person2);
-        changePerson(person2);
+        changePerson2(person2);
         System.out.println("After change: " + person2);
     }
 
@@ -53,13 +53,14 @@ public class Main {
         person = new Person("Ilya", "Lagutenko");
     }
 
-    public static void changePerson2(Person person2) {
-        person2 = new Person("Lyapis", "Trubetskoy");
+    public static void changePerson2(Person2 person2) {
+        person2.name = "Ilya";
+        person2.surname = "Lagutenko";
     }
 
 }
 
 
-// По итогам всех задач происходит передача по значению (примитив) т.к. фактически мы передаем копию переменной.
-// Изменения, которые происходят с переменной внутри функции, не влияют на исходное значение.
-// P.s. Или я тупой и я чего-то не понимаю или все таки происходит, но если первое условие верное, то помогите понять пожалуйста вы лично мне ;((
+// В задаче 5-6  не происходит изменений т.к. используются примитивы как int и происходит вызов копии.
+// В задаче 7 так же нет изменений из-за примитива int, но в задаче 8 мы обращаемся напрямую к массиву и меняем его значение.
+

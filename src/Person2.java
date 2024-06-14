@@ -1,6 +1,6 @@
 public class Person2 {
-    private String name;
-    private String surname;
+    public String name;
+    public String surname;
 
     public Person2(String name, String surname) {
         this.name = name;
@@ -9,9 +9,6 @@ public class Person2 {
 
     @Override
     public String toString() {
-        return "Person2{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+        return name + " " + surname;
     }
 }
